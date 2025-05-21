@@ -1,0 +1,89 @@
+{
+  "Startpos": "0, 0",
+  "Blocks": [
+    {
+      "Position": "24, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "72, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "120, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "168, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "216, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "264, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "312, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "360, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "408, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "456, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "552, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "504, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "456, 24",
+      "BlockType": 2
+    },
+    {
+      "Position": "504, 24",
+      "BlockType": 2
+    },
+    {
+      "Position": "552, 24",
+      "BlockType": 2
+    },
+    {
+      "Position": "216, -24",
+      "BlockType": 1
+    },
+    {
+      "Position": "264, -24",
+      "BlockType": 1
+    },
+    {
+      "Position": "360, -24",
+      "BlockType": 1
+    },
+    {
+      "Position": "408, -24",
+      "BlockType": 1
+    },
+    {
+      "Position": "456, -24",
+      "BlockType": 1
+    },
+    {
+      "Position": "312, -24",
+      "BlockType": 1
+    }
+  ]
+}

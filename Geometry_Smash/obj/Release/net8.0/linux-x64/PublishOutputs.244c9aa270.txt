@@ -1,0 +1,10 @@
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Geometry_Smash.pdb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Content/DefaultBlock.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Content/font.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Content/Gometry.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Content/GometryBlock.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Content/GradientBlock.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Content/RandomBlock.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Content/SmolSpike.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Content/Spike.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Release/net8.0/linux-x64/publish/Geometry_Smash

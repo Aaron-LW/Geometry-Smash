@@ -15,16 +15,20 @@ public class Entity
     public float Scale;
     
     public Texture2D Texture;
+    public int TextureIndex;
+
     public Color Color = Color.White;
 
     public List<Component> Components = new List<Component>();
 
     public bool Hidden = false;
 
-    public Entity(Vector2 position, Texture2D texture, float scale = 1f, float rotation = 0f)
+    public Entity(Vector2 position, int textureIndex = -1, Texture2D texture = null, float scale = 1f, float rotation = 0f)
     {
+        if (texture != null) { Texture = texture; TextureIndex = -1; }
+        else { Texture = Game1.Blocks[textureIndex]; TextureIndex = textureIndex; }
+
         Position = position;
-        Texture = texture;
         Scale = scale;
         Rotation = rotation;
         Color = Color.White;
@@ -104,9 +108,9 @@ namespace EntitySystem
             }
         }
     
-        public static Entity CreateEntity(Vector2 position, Texture2D texture, float scale = 1f, float rotation = 0f)
+        public static Entity CreateEntity(Vector2 position, int textureIndex = -1, Texture2D texture = null, float scale = 1f, float rotation = 0f)
         {
-            Game1.CurrLevel.Entities.Add(new Entity(position, texture, scale, rotation));
+            Game1.CurrLevel.Entities.Add(new Entity(position, textureIndex, texture, scale, rotation));
             return Game1.CurrLevel.Entities[Game1.CurrLevel.Entities.Count - 1];
         }
         
