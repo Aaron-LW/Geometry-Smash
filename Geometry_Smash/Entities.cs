@@ -5,7 +5,6 @@ using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 public class Entity 
 {
@@ -46,7 +45,7 @@ public class Entity
             {
                 var rectangleF = C.Hitbox.GetValueOrDefault();
             
-                _spriteBatch.DrawRectangle(new RectangleF(new Vector2(rectangleF.Location.X, rectangleF.Location.Y) + Position + CamPos - new Vector2(Texture.Width / 2 + 16, Texture.Height / 2 + 16), new SizeF(rectangleF.Size.Width, rectangleF.Size.Height)), Color.Red, 1);
+                _spriteBatch.DrawRectangle(new RectangleF(new Vector2(rectangleF.Location.X, rectangleF.Location.Y) + Position + CamPos - new Vector2(Texture.Width / 2 + 6.3f * Game1.GlobalScale, Texture.Height / 2 + 6.3f * Game1.GlobalScale), new SizeF(rectangleF.Size.Width, rectangleF.Size.Height)), Color.Red, 1);
             }
         }
     }

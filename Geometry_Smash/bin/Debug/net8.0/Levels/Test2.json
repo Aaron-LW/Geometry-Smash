@@ -2,88 +2,3328 @@
   "Startpos": "0, 0",
   "Blocks": [
     {
-      "Position": "24, 72",
+      "Position": "-216, 216",
       "BlockType": 0
     },
     {
-      "Position": "72, 72",
+      "Position": "-168, 216",
       "BlockType": 0
     },
     {
-      "Position": "120, 72",
+      "Position": "-120, 216",
       "BlockType": 0
     },
     {
-      "Position": "168, 72",
+      "Position": "-72, 216",
       "BlockType": 0
     },
     {
-      "Position": "216, 72",
+      "Position": "-24, 216",
       "BlockType": 0
     },
     {
-      "Position": "264, 72",
+      "Position": "216, 216",
       "BlockType": 0
     },
     {
-      "Position": "312, 72",
+      "Position": "24, 216",
       "BlockType": 0
     },
     {
-      "Position": "360, 72",
+      "Position": "72, 216",
       "BlockType": 0
     },
     {
-      "Position": "408, 72",
+      "Position": "168, 216",
       "BlockType": 0
     },
     {
-      "Position": "456, 72",
+      "Position": "120, 216",
       "BlockType": 0
     },
     {
-      "Position": "552, 72",
+      "Position": "264, 216",
       "BlockType": 0
     },
     {
-      "Position": "504, 72",
+      "Position": "312, 216",
       "BlockType": 0
     },
     {
-      "Position": "456, 24",
-      "BlockType": 2
+      "Position": "360, 216",
+      "BlockType": 0
     },
     {
-      "Position": "504, 24",
-      "BlockType": 2
+      "Position": "600, 216",
+      "BlockType": 0
     },
     {
-      "Position": "552, 24",
-      "BlockType": 2
+      "Position": "408, 216",
+      "BlockType": 0
     },
     {
-      "Position": "216, -24",
+      "Position": "456, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "504, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "744, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "552, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "792, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "792, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "696, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "648, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "600, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "984, 24",
+      "BlockType": 0
+    },
+    {
+      "Position": "984, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 408",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 360",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 264",
+      "BlockType": 0
+    },
+    {
+      "Position": "1224, -24",
+      "BlockType": 0
+    },
+    {
+      "Position": "1176, -24",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "1272, -24",
+      "BlockType": 0
+    },
+    {
+      "Position": "1272, 24",
+      "BlockType": 0
+    },
+    {
+      "Position": "1272, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "1272, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "1272, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "1272, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1320, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1368, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1416, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1464, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1560, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1512, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1608, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1704, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1656, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1752, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1848, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1800, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1896, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "1896, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "1896, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "1944, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "1992, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2040, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2088, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2088, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "2088, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2136, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2184, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2232, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2280, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2328, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2376, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2424, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2472, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2520, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2520, 168",
+      "BlockType": 0
+    },
+    {
+      "Position": "2520, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2568, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2616, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2712, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "2664, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2712, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2712, 24",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 120",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 24",
+      "BlockType": 0
+    },
+    {
+      "Position": "2760, 24",
+      "BlockType": 0
+    },
+    {
+      "Position": "2856, 24",
+      "BlockType": 0
+    },
+    {
+      "Position": "2808, 24",
+      "BlockType": 0
+    },
+    {
+      "Position": "792, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "1080, -24",
+      "BlockType": 0
+    },
+    {
+      "Position": "936, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "888, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "840, 72",
+      "BlockType": 0
+    },
+    {
+      "Position": "1128, -24",
+      "BlockType": 0
+    },
+    {
+      "Position": "984, -24",
+      "BlockType": 0
+    },
+    {
+      "Position": "1032, -24",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 456",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 504",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 552",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 600",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 648",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 696",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 744",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 792",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 840",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 888",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 984",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 936",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 1032",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 1128",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 1080",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 1176",
+      "BlockType": 0
+    },
+    {
+      "Position": "2952, 1176",
       "BlockType": 1
     },
     {
-      "Position": "264, -24",
+      "Position": "3000, 1176",
       "BlockType": 1
+    },
+    {
+      "Position": "3048, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3096, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3144, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3192, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3240, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3288, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3336, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3384, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3432, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3480, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3528, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3576, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3624, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3672, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3720, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3768, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3816, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3864, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3912, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4008, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4056, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3960, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4104, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4200, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4248, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4152, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "3240, 1128",
+      "BlockType": 2
+    },
+    {
+      "Position": "3672, 1128",
+      "BlockType": 2
+    },
+    {
+      "Position": "4056, 1128",
+      "BlockType": 2
+    },
+    {
+      "Position": "4296, 1176",
+      "BlockType": 0
+    },
+    {
+      "Position": "4296, 1128",
+      "BlockType": 0
+    },
+    {
+      "Position": "4296, 1080",
+      "BlockType": 0
+    },
+    {
+      "Position": "4344, 1080",
+      "BlockType": 1
+    },
+    {
+      "Position": "4392, 1080",
+      "BlockType": 1
+    },
+    {
+      "Position": "4440, 1080",
+      "BlockType": 1
+    },
+    {
+      "Position": "4488, 1080",
+      "BlockType": 1
+    },
+    {
+      "Position": "4536, 1080",
+      "BlockType": 0
+    },
+    {
+      "Position": "4536, 1128",
+      "BlockType": 0
+    },
+    {
+      "Position": "4536, 1176",
+      "BlockType": 0
+    },
+    {
+      "Position": "4584, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4632, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4680, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4728, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4776, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4824, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4872, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4920, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "4968, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "5016, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "5064, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "5112, 1176",
+      "BlockType": 2
+    },
+    {
+      "Position": "5160, 1176",
+      "BlockType": 2
+    },
+    {
+      "Position": "5208, 1176",
+      "BlockType": 2
+    },
+    {
+      "Position": "5256, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "5304, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "5352, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "5400, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "5448, 1176",
+      "BlockType": 0
+    },
+    {
+      "Position": "5448, 1464",
+      "BlockType": 0
+    },
+    {
+      "Position": "5448, 1416",
+      "BlockType": 0
+    },
+    {
+      "Position": "5448, 1368",
+      "BlockType": 0
+    },
+    {
+      "Position": "5448, 1320",
+      "BlockType": 0
+    },
+    {
+      "Position": "5448, 1272",
+      "BlockType": 0
+    },
+    {
+      "Position": "5448, 1224",
+      "BlockType": 0
+    },
+    {
+      "Position": "5880, 1464",
+      "BlockType": 0
+    },
+    {
+      "Position": "5832, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5688, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5784, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5736, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5640, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5496, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5592, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5496, 1416",
+      "BlockType": 4
+    },
+    {
+      "Position": "5544, 1416",
+      "BlockType": 4
+    },
+    {
+      "Position": "5592, 1416",
+      "BlockType": 4
+    },
+    {
+      "Position": "5544, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5880, 1416",
+      "BlockType": 0
+    },
+    {
+      "Position": "5880, 1368",
+      "BlockType": 0
+    },
+    {
+      "Position": "6024, 1368",
+      "BlockType": 1
+    },
+    {
+      "Position": "5976, 1368",
+      "BlockType": 1
+    },
+    {
+      "Position": "5928, 1368",
+      "BlockType": 1
+    },
+    {
+      "Position": "648, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "696, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "744, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "792, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "840, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "888, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "936, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "984, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "1080, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "1176, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "1176, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 72",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 24",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "1176, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "1080, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "936, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "840, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "840, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "888, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "888, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "984, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "936, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "984, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "1080, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 72",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 24",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 24",
+      "BlockType": 3
+    },
+    {
+      "Position": "1176, 24",
+      "BlockType": 3
+    },
+    {
+      "Position": "1080, 24",
+      "BlockType": 3
+    },
+    {
+      "Position": "1080, 72",
+      "BlockType": 3
+    },
+    {
+      "Position": "1176, 72",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 72",
+      "BlockType": 3
+    },
+    {
+      "Position": "-216, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "-120, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "-168, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "-72, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "-24, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "24, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "72, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "120, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "168, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "216, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "264, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "312, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "360, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "408, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "456, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "504, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "552, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "600, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "696, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "648, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "744, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "792, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "840, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "936, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "888, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "984, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1080, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1176, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1272, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1320, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1368, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1416, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1512, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1464, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1560, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1608, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1656, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1704, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1752, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1800, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1848, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1896, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1944, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "1992, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "2040, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "1944, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "1944, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "1992, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2040, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "1992, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "2040, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2136, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2088, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2184, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2232, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2280, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2328, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2424, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2472, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2616, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2376, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2520, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2568, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2568, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "2568, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "2664, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "2712, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "2616, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "2664, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "2712, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "2616, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "2664, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2712, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2760, 72",
+      "BlockType": 3
+    },
+    {
+      "Position": "2760, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "2760, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "2760, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2760, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "2808, 72",
+      "BlockType": 3
+    },
+    {
+      "Position": "2856, 72",
+      "BlockType": 3
+    },
+    {
+      "Position": "2856, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "2856, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "2808, 168",
+      "BlockType": 3
+    },
+    {
+      "Position": "2808, 120",
+      "BlockType": 3
+    },
+    {
+      "Position": "2808, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "2808, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2856, 264",
+      "BlockType": 3
+    },
+    {
+      "Position": "2856, 216",
+      "BlockType": 3
+    },
+    {
+      "Position": "2856, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2760, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2712, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2808, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2664, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2616, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2520, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2472, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2568, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2424, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2376, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2280, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2232, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2328, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2184, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2088, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2136, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "2040, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1944, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1992, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1896, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1800, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1848, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1608, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1512, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1704, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1752, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1656, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1560, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1416, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1320, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1368, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1464, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1272, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1080, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1128, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1224, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1176, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "792, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "840, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "888, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "936, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "984, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "1032, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "504, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "600, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "648, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "696, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "744, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "552, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "264, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "312, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "360, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "408, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "456, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "24, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "120, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "168, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "216, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "72, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "-216, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "-120, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "-72, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "-24, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "-168, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "-264, 216",
+      "BlockType": 0
+    },
+    {
+      "Position": "-264, 264",
+      "BlockType": 0
+    },
+    {
+      "Position": "-264, 312",
+      "BlockType": 0
+    },
+    {
+      "Position": "-312, 264",
+      "BlockType": 0
+    },
+    {
+      "Position": "3000, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "2952, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3048, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3096, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3144, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3192, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3240, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3288, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3336, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3816, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3624, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3528, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3432, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3480, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3384, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3576, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3672, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3768, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3720, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3864, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3960, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4008, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "3912, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4056, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4104, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4296, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4248, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4152, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4200, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4392, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4344, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4488, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4488, 1176",
+      "BlockType": 3
+    },
+    {
+      "Position": "4440, 1176",
+      "BlockType": 3
+    },
+    {
+      "Position": "4440, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4344, 1176",
+      "BlockType": 3
+    },
+    {
+      "Position": "4344, 1128",
+      "BlockType": 3
+    },
+    {
+      "Position": "4440, 1128",
+      "BlockType": 3
+    },
+    {
+      "Position": "4392, 1176",
+      "BlockType": 3
+    },
+    {
+      "Position": "4392, 1128",
+      "BlockType": 3
+    },
+    {
+      "Position": "4488, 1128",
+      "BlockType": 3
+    },
+    {
+      "Position": "4536, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4632, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4680, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4584, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4728, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4824, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4920, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4872, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4776, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "4968, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5112, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5016, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5064, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5160, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5208, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5256, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5928, 1416",
+      "BlockType": 3
+    },
+    {
+      "Position": "5400, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5304, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5352, 1224",
+      "BlockType": 3
+    },
+    {
+      "Position": "5976, 1416",
+      "BlockType": 3
+    },
+    {
+      "Position": "6024, 1416",
+      "BlockType": 3
+    },
+    {
+      "Position": "6024, 1464",
+      "BlockType": 3
+    },
+    {
+      "Position": "5928, 1464",
+      "BlockType": 3
+    },
+    {
+      "Position": "5976, 1464",
+      "BlockType": 3
+    },
+    {
+      "Position": "6024, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5976, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5880, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5928, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5832, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5784, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5736, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5688, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5640, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5592, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5544, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5448, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5496, 1512",
+      "BlockType": 3
+    },
+    {
+      "Position": "5448, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5496, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5544, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5592, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5640, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5688, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5736, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5784, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5832, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5880, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5976, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "6024, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "5928, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "6072, 1560",
+      "BlockType": 1
+    },
+    {
+      "Position": "6072, 1512",
+      "BlockType": 1
+    },
+    {
+      "Position": "6072, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "6072, 1368",
+      "BlockType": 1
+    },
+    {
+      "Position": "6072, 1416",
+      "BlockType": 1
+    },
+    {
+      "Position": "6120, 1416",
+      "BlockType": 1
+    },
+    {
+      "Position": "6120, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "6120, 1512",
+      "BlockType": 1
+    },
+    {
+      "Position": "6168, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "5400, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "5352, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "5304, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "5208, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "5160, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "5256, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "5112, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "5064, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "5016, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4968, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4920, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4872, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4776, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4680, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4632, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4728, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4824, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4584, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4488, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4440, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4536, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4392, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4344, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4296, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3816, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3864, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3912, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3960, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4056, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4104, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4200, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4248, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4008, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "4152, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3528, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3624, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3672, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3768, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3720, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3576, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "2952, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3048, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3096, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3144, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3240, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3288, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3384, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3432, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3480, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3336, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3192, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "3000, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "2904, 1224",
+      "BlockType": 0
+    },
+    {
+      "Position": "2904, 1272",
+      "BlockType": 0
+    },
+    {
+      "Position": "120, -72",
+      "BlockType": 1
+    },
+    {
+      "Position": "360, 24",
+      "BlockType": 1
+    },
+    {
+      "Position": "648, -72",
+      "BlockType": 1
+    },
+    {
+      "Position": "1080, -264",
+      "BlockType": 1
+    },
+    {
+      "Position": "1272, -168",
+      "BlockType": 1
+    },
+    {
+      "Position": "1512, -120",
+      "BlockType": 1
+    },
+    {
+      "Position": "1656, 24",
+      "BlockType": 1
+    },
+    {
+      "Position": "1848, -264",
+      "BlockType": 1
+    },
+    {
+      "Position": "1608, -264",
+      "BlockType": 1
+    },
+    {
+      "Position": "648, -264",
+      "BlockType": 1
+    },
+    {
+      "Position": "1944, -120",
+      "BlockType": 1
+    },
+    {
+      "Position": "2184, -264",
+      "BlockType": 1
+    },
+    {
+      "Position": "2424, -24",
+      "BlockType": 1
+    },
+    {
+      "Position": "2616, -216",
+      "BlockType": 1
+    },
+    {
+      "Position": "2952, -168",
+      "BlockType": 1
+    },
+    {
+      "Position": "3384, -264",
+      "BlockType": 1
+    },
+    {
+      "Position": "3576, -120",
+      "BlockType": 1
+    },
+    {
+      "Position": "3288, -72",
+      "BlockType": 1
+    },
+    {
+      "Position": "3576, 24",
+      "BlockType": 1
+    },
+    {
+      "Position": "3816, -24",
+      "BlockType": 1
+    },
+    {
+      "Position": "3816, -168",
+      "BlockType": 1
+    },
+    {
+      "Position": "3720, 120",
+      "BlockType": 1
+    },
+    {
+      "Position": "3384, 168",
+      "BlockType": 1
+    },
+    {
+      "Position": "3288, 456",
+      "BlockType": 1
+    },
+    {
+      "Position": "3624, 360",
+      "BlockType": 1
+    },
+    {
+      "Position": "3816, 408",
+      "BlockType": 1
+    },
+    {
+      "Position": "3432, 648",
+      "BlockType": 1
+    },
+    {
+      "Position": "3240, 696",
+      "BlockType": 1
+    },
+    {
+      "Position": "3624, 696",
+      "BlockType": 1
+    },
+    {
+      "Position": "3864, 696",
+      "BlockType": 1
+    },
+    {
+      "Position": "3480, 840",
+      "BlockType": 1
+    },
+    {
+      "Position": "3720, 840",
+      "BlockType": 1
+    },
+    {
+      "Position": "4104, 744",
+      "BlockType": 1
+    },
+    {
+      "Position": "4152, 504",
+      "BlockType": 1
+    },
+    {
+      "Position": "4392, 648",
+      "BlockType": 1
+    },
+    {
+      "Position": "4488, 792",
+      "BlockType": 1
+    },
+    {
+      "Position": "4584, 552",
+      "BlockType": 1
+    },
+    {
+      "Position": "4296, 456",
+      "BlockType": 1
+    },
+    {
+      "Position": "4824, 840",
+      "BlockType": 1
+    },
+    {
+      "Position": "5016, 936",
+      "BlockType": 1
+    },
+    {
+      "Position": "4920, 600",
+      "BlockType": 1
+    },
+    {
+      "Position": "5352, 504",
+      "BlockType": 1
+    },
+    {
+      "Position": "5304, 696",
+      "BlockType": 1
+    },
+    {
+      "Position": "5160, 744",
+      "BlockType": 1
+    },
+    {
+      "Position": "5448, 888",
+      "BlockType": 1
+    },
+    {
+      "Position": "5592, 696",
+      "BlockType": 1
+    },
+    {
+      "Position": "5784, 552",
+      "BlockType": 1
+    },
+    {
+      "Position": "5784, 744",
+      "BlockType": 1
+    },
+    {
+      "Position": "5688, 1032",
+      "BlockType": 1
+    },
+    {
+      "Position": "5784, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "6024, 1176",
+      "BlockType": 1
+    },
+    {
+      "Position": "6024, 840",
+      "BlockType": 1
+    },
+    {
+      "Position": "6216, 648",
+      "BlockType": 1
+    },
+    {
+      "Position": "6408, 744",
+      "BlockType": 1
+    },
+    {
+      "Position": "6312, 1080",
+      "BlockType": 1
+    },
+    {
+      "Position": "6408, 1272",
+      "BlockType": 1
+    },
+    {
+      "Position": "6552, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "6504, 1608",
+      "BlockType": 1
+    },
+    {
+      "Position": "6312, 1656",
+      "BlockType": 1
+    },
+    {
+      "Position": "6312, 1464",
+      "BlockType": 1
+    },
+    {
+      "Position": "6216, 1656",
+      "BlockType": 1
+    },
+    {
+      "Position": "6264, 1656",
+      "BlockType": 1
+    },
+    {
+      "Position": "504, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "504, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "504, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "504, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "504, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "552, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "600, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "600, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "600, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "600, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "600, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "648, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "696, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "696, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "744, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "792, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "792, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "792, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "792, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "792, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "696, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "504, 504",
+      "BlockType": 2
+    },
+    {
+      "Position": "600, 504",
+      "BlockType": 2
+    },
+    {
+      "Position": "792, 504",
+      "BlockType": 2
+    },
+    {
+      "Position": "696, 600",
+      "BlockType": 2
+    },
+    {
+      "Position": "1032, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "1032, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1080, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "1128, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1176, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1224, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "1272, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1320, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1272, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1320, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1272, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1368, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1368, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "1368, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1368, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "1368, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1416, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1512, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1464, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1512, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "1512, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1464, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1416, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1464, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1512, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1560, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1560, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "1560, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1560, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "1560, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1608, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1656, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1704, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1704, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "1704, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1704, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "1704, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1608, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1656, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1800, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1800, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "1800, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1800, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "1800, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1848, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1896, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1944, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1944, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "1944, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "1944, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "1944, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1992, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "2040, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "2088, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "1992, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2040, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2088, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "1992, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "2088, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "2088, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "2088, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "2136, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2184, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2232, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2232, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "2232, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "2232, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "2232, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "2280, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "2328, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "2376, 552",
+      "BlockType": 3
+    },
+    {
+      "Position": "2280, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "2280, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2328, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2376, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2376, 600",
+      "BlockType": 3
+    },
+    {
+      "Position": "2376, 648",
+      "BlockType": 3
+    },
+    {
+      "Position": "2376, 696",
+      "BlockType": 3
+    },
+    {
+      "Position": "2424, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2472, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "2520, 744",
+      "BlockType": 3
+    },
+    {
+      "Position": "120, -120",
+      "BlockType": 2
     },
     {
       "Position": "360, -24",
-      "BlockType": 1
+      "BlockType": 2
     },
     {
-      "Position": "408, -24",
-      "BlockType": 1
+      "Position": "648, -120",
+      "BlockType": 2
     },
     {
-      "Position": "456, -24",
-      "BlockType": 1
+      "Position": "648, -312",
+      "BlockType": 2
     },
     {
-      "Position": "312, -24",
-      "BlockType": 1
+      "Position": "1080, -312",
+      "BlockType": 2
+    },
+    {
+      "Position": "1272, -216",
+      "BlockType": 2
+    },
+    {
+      "Position": "1512, -168",
+      "BlockType": 2
+    },
+    {
+      "Position": "1608, -312",
+      "BlockType": 2
+    },
+    {
+      "Position": "1656, -24",
+      "BlockType": 2
+    },
+    {
+      "Position": "1848, -312",
+      "BlockType": 2
+    },
+    {
+      "Position": "1944, -168",
+      "BlockType": 2
+    },
+    {
+      "Position": "2184, -312",
+      "BlockType": 2
+    },
+    {
+      "Position": "2424, -72",
+      "BlockType": 2
+    },
+    {
+      "Position": "2616, -264",
+      "BlockType": 2
+    },
+    {
+      "Position": "2952, -216",
+      "BlockType": 2
+    },
+    {
+      "Position": "3288, -120",
+      "BlockType": 2
+    },
+    {
+      "Position": "3384, -312",
+      "BlockType": 2
+    },
+    {
+      "Position": "3576, -24",
+      "BlockType": 2
+    },
+    {
+      "Position": "3576, -168",
+      "BlockType": 2
+    },
+    {
+      "Position": "3384, 120",
+      "BlockType": 2
+    },
+    {
+      "Position": "3720, 72",
+      "BlockType": 2
+    },
+    {
+      "Position": "3816, -72",
+      "BlockType": 2
+    },
+    {
+      "Position": "3816, -216",
+      "BlockType": 2
+    },
+    {
+      "Position": "3816, 360",
+      "BlockType": 2
+    },
+    {
+      "Position": "4152, 456",
+      "BlockType": 2
+    },
+    {
+      "Position": "4296, 408",
+      "BlockType": 2
+    },
+    {
+      "Position": "4392, 600",
+      "BlockType": 2
+    },
+    {
+      "Position": "4584, 504",
+      "BlockType": 2
+    },
+    {
+      "Position": "4488, 744",
+      "BlockType": 2
+    },
+    {
+      "Position": "4824, 792",
+      "BlockType": 2
+    },
+    {
+      "Position": "5016, 888",
+      "BlockType": 2
+    },
+    {
+      "Position": "4920, 552",
+      "BlockType": 2
+    },
+    {
+      "Position": "5160, 696",
+      "BlockType": 2
+    },
+    {
+      "Position": "5304, 648",
+      "BlockType": 2
+    },
+    {
+      "Position": "5352, 456",
+      "BlockType": 2
+    },
+    {
+      "Position": "5448, 840",
+      "BlockType": 2
+    },
+    {
+      "Position": "5592, 648",
+      "BlockType": 2
+    },
+    {
+      "Position": "5688, 984",
+      "BlockType": 4
+    },
+    {
+      "Position": "5784, 696",
+      "BlockType": 4
+    },
+    {
+      "Position": "5784, 504",
+      "BlockType": 4
+    },
+    {
+      "Position": "5784, 1128",
+      "BlockType": 4
+    },
+    {
+      "Position": "6024, 1128",
+      "BlockType": 4
+    },
+    {
+      "Position": "6024, 792",
+      "BlockType": 4
+    },
+    {
+      "Position": "6216, 600",
+      "BlockType": 4
+    },
+    {
+      "Position": "6312, 1032",
+      "BlockType": 4
+    },
+    {
+      "Position": "6408, 1224",
+      "BlockType": 4
+    },
+    {
+      "Position": "6408, 696",
+      "BlockType": 4
+    },
+    {
+      "Position": "6552, 1416",
+      "BlockType": 4
+    },
+    {
+      "Position": "6312, 1416",
+      "BlockType": 4
+    },
+    {
+      "Position": "6504, 1560",
+      "BlockType": 4
+    },
+    {
+      "Position": "2952, 216",
+      "BlockType": 4
+    },
+    {
+      "Position": "2760, 552",
+      "BlockType": 4
+    },
+    {
+      "Position": "2808, 408",
+      "BlockType": 4
+    },
+    {
+      "Position": "3000, 456",
+      "BlockType": 4
+    },
+    {
+      "Position": "2952, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2472, 72",
+      "BlockType": 4
+    },
+    {
+      "Position": "2472, 168",
+      "BlockType": 4
+    },
+    {
+      "Position": "2760, 408",
+      "BlockType": 4
+    },
+    {
+      "Position": "2616, 72",
+      "BlockType": 4
+    },
+    {
+      "Position": "3000, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2232, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2520, -72",
+      "BlockType": 4
+    },
+    {
+      "Position": "2568, -24",
+      "BlockType": 4
+    },
+    {
+      "Position": "3624, -264",
+      "BlockType": 4
+    },
+    {
+      "Position": "3096, 120",
+      "BlockType": 4
+    },
+    {
+      "Position": "2664, -72",
+      "BlockType": 4
+    },
+    {
+      "Position": "2184, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2328, 120",
+      "BlockType": 4
+    },
+    {
+      "Position": "2232, 120",
+      "BlockType": 4
+    },
+    {
+      "Position": "2136, 120",
+      "BlockType": 4
+    },
+    {
+      "Position": "3336, 216",
+      "BlockType": 4
+    },
+    {
+      "Position": "3288, 216",
+      "BlockType": 4
+    },
+    {
+      "Position": "3288, 264",
+      "BlockType": 4
+    },
+    {
+      "Position": "3000, -24",
+      "BlockType": 4
+    },
+    {
+      "Position": "3288, 360",
+      "BlockType": 4
+    },
+    {
+      "Position": "2232, -408",
+      "BlockType": 4
+    },
+    {
+      "Position": "2760, -360",
+      "BlockType": 4
+    },
+    {
+      "Position": "3000, -216",
+      "BlockType": 4
+    },
+    {
+      "Position": "3000, 504",
+      "BlockType": 4
+    },
+    {
+      "Position": "2616, -120",
+      "BlockType": 4
+    },
+    {
+      "Position": "2088, -216",
+      "BlockType": 4
+    },
+    {
+      "Position": "3528, -264",
+      "BlockType": 4
+    },
+    {
+      "Position": "2712, -168",
+      "BlockType": 4
+    },
+    {
+      "Position": "2664, -24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2664, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "3480, -264",
+      "BlockType": 4
+    },
+    {
+      "Position": "2472, -168",
+      "BlockType": 4
+    },
+    {
+      "Position": "2616, -24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2184, 456",
+      "BlockType": 4
+    },
+    {
+      "Position": "3432, 456",
+      "BlockType": 4
+    },
+    {
+      "Position": "2328, 72",
+      "BlockType": 4
+    },
+    {
+      "Position": "2328, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2280, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2328, -264",
+      "BlockType": 4
+    },
+    {
+      "Position": "3192, -168",
+      "BlockType": 4
+    },
+    {
+      "Position": "3048, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2424, 72",
+      "BlockType": 4
+    },
+    {
+      "Position": "2424, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "2472, 24",
+      "BlockType": 4
+    },
+    {
+      "Position": "3144, 360",
+      "BlockType": 4
+    },
+    {
+      "Position": "3144, 408",
+      "BlockType": 4
+    },
+    {
+      "Position": "3192, 408",
+      "BlockType": 4
+    },
+    {
+      "Position": "3192, 456",
+      "BlockType": 4
+    },
+    {
+      "Position": "1896, 408",
+      "BlockType": 4
+    },
+    {
+      "Position": "1944, 408",
+      "BlockType": 4
+    },
+    {
+      "Position": "2760, -120",
+      "BlockType": 4
+    },
+    {
+      "Position": "3192, -360",
+      "BlockType": 4
     }
   ]
 }

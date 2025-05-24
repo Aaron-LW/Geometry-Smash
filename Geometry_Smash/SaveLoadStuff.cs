@@ -62,7 +62,7 @@ public class LevelSerializer
         foreach (var block in data.Blocks)
         {
             Texture2D tex = Game1.Blocks[block.BlockType];
-            entities.Add(new Entity(block.Position, block.BlockType, null, 3f));
+            entities.Add(new Entity(block.Position, block.BlockType, null, Game1.GlobalScale));
 
             ColliderComponent Collider = null;
 

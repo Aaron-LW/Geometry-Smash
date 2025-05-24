@@ -34,6 +34,7 @@ public class GravityComponent : Component
     public void Update() 
     {
         YVel += Acceleration;
+        Console.WriteLine(Acceleration);
         Parent.Velocity.Y += YVel;
     }
 }
@@ -104,8 +105,8 @@ public class ColliderComponent : Component
             
                 if (previousBottom - 1 <= otherTop) 
                 {
-                    if (GravityComponente != null) 
-                    {   
+                    if (GravityComponente != null)
+                    {
                         GravityComponente.YVel = 0f;
                     } 
 
@@ -113,7 +114,7 @@ public class ColliderComponent : Component
                     Parent.Velocity.Y = 0f;
 
                     UpdatedRight = otherTop - Parent.Texture.Height * Parent.Scale + (Parent.Texture.Width * Parent.Scale);
-                    
+
                     OnGround = true;
                 }
 
@@ -142,14 +143,13 @@ public class CharacterControllerComponent : Component
     public void Update() 
     {
         ColliderComponent ColliderComponent = Parent.GetComponent<ColliderComponent>();
-        
-        if (ColliderComponent != null) 
+        if (ColliderComponent != null)
         {
             KeyboardState KeyboardState = Keyboard.GetState();
         
             if (ColliderComponent.OnGround == true) 
             {
-                if (KeyboardState.IsKeyDown(Keys.Space)) 
+                if (KeyboardState.IsKeyDown(Keys.Space))
                 {
                     Parent.Velocity.Y -= JumpStrength;
                 }

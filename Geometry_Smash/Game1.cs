@@ -4,6 +4,9 @@ using Microsoft.Xna.Framework.Input;
 using EntitySystem;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.CompilerServices;
+using MonoGame.Extended;
 
 namespace Geometry_Smash;
 
@@ -11,8 +14,6 @@ public class Game1 : Game
 {
     public static List<Texture2D> Blocks = new List<Texture2D>();
     private int CurrBlock = 0;
-
-    private int Katzi = 1;
 
     public static bool Debug = false;
 
@@ -36,6 +37,10 @@ public class Game1 : Game
     private readonly LevelSerializer SaveLoadStuff;
 
     private bool LevelSelect = false;
+    private int SelectedLevel;
+    private string CurrLevelName = "";
+
+    public static float GlobalScale = 5f;
 
     public Game1()
     {
@@ -48,6 +53,9 @@ public class Game1 : Game
 
         Window.AllowUserResizing = true;
 
+        _graphics.IsFullScreen = true;
+        _graphics.ApplyChanges();
+
         SaveLoadStuff = new LevelSerializer(this);
     }
 
@@ -55,7 +63,7 @@ public class Game1 : Game
     {
         CurrLevel = new Level(new System.Numerics.Vector2(0, 0), new Dictionary<Vector2, Entity>(), new List<Entity>(), new List<ColliderComponent>());
 
-        Cube = EntityUtils.CreateEntity(new Vector2(0, 0), -1, Content.Load<Texture2D>("Gometry"), 3f);
+        Cube = EntityUtils.CreateEntity(new Vector2(0, 0), -1, Content.Load<Texture2D>("Gometry"), GlobalScale);
         Cube.AddComponent(new GravityComponent(Cube, 0.2f));
         Cube.AddComponent(new ColliderComponent(Cube, ResetLevel, null, false, false));
         Cube.AddComponent(new CharacterControllerComponent(Cube, 25));
@@ -101,7 +109,7 @@ public class Game1 : Game
             //Console.WriteLine($"FPS: {_fps}");
         }
 
-        if (LevelEditor)
+        if (LevelEditor && !LevelSelect)
         {
             if (KeyboardState.IsKeyDown(Keys.W))
             {
@@ -135,20 +143,16 @@ public class Game1 : Game
                 Cube.Position.X = MouseState.Position.X - CamPos.X;
                 Cube.Position.Y = MouseState.Position.Y - CamPos.Y;
             }
-
-            if (KeyboardState.IsKeyUp(Keys.U) && PreviousKeyboardState.IsKeyDown(Keys.U))
-            {
-                LevelSerializer.SaveLevel(CurrLevel, "Test2");
-            }
-            if (KeyboardState.IsKeyUp(Keys.I) && PreviousKeyboardState.IsKeyDown(Keys.I))
-            {
-                CurrLevel = SaveLoadStuff.LoadLevel("Test2");
-            }
         }
 
         if (KeyboardState.IsKeyUp(Keys.Z) && PreviousKeyboardState.IsKeyDown(Keys.Z))
         {
             Debug = !Debug;
+        }
+
+        if (KeyboardState.IsKeyUp(Keys.C) && PreviousKeyboardState.IsKeyDown(Keys.C))
+        {
+            LevelSelect = !LevelSelect;
         }
 
         if (KeyboardState.IsKeyUp(Keys.F) && PreviousKeyboardState.IsKeyDown(Keys.F))
@@ -164,18 +168,72 @@ public class Game1 : Game
             }
         }
 
-        if (KeyboardState.IsKeyUp(Keys.Up) && PreviousKeyboardState.IsKeyDown(Keys.Up))
+        if (LevelEditor && !LevelSelect)
         {
-            if (CurrBlock + 1 != Blocks.Count)
+            if (KeyboardState.IsKeyUp(Keys.Up) && PreviousKeyboardState.IsKeyDown(Keys.Up))
             {
-                CurrBlock++;
+                if (CurrBlock + 1 != Blocks.Count)
+                {
+                    CurrBlock++;
+                }
+            }
+            if (KeyboardState.IsKeyUp(Keys.Down) && PreviousKeyboardState.IsKeyDown(Keys.Down))
+            {
+                if (CurrBlock - 1 != -1)
+                {
+                    CurrBlock--;
+                }
             }
         }
-        if (KeyboardState.IsKeyUp(Keys.Down) && PreviousKeyboardState.IsKeyDown(Keys.Down))
+        else if (LevelSelect)
         {
-            if (CurrBlock - 1 != -1)
+            string dir = Path.Combine(Directory.GetCurrentDirectory(), "Levels");
+            int FileAmount = Directory.GetFiles(dir).Length;
+
+            if (KeyboardState.IsKeyUp(Keys.Down) && PreviousKeyboardState.IsKeyDown(Keys.Down))
             {
-                CurrBlock--;
+                if (SelectedLevel + 1 != FileAmount)
+                {
+                    SelectedLevel++;
+                }
+            }
+            if (KeyboardState.IsKeyUp(Keys.Up) && PreviousKeyboardState.IsKeyDown(Keys.Up))
+            {
+                if (SelectedLevel - 1 != -1)
+                {
+                    SelectedLevel--;
+                }
+            }
+
+            var Files = Directory.GetFiles(dir);
+
+            if (KeyboardState.IsKeyUp(Keys.Enter) && PreviousKeyboardState.IsKeyDown(Keys.Enter))
+            {
+                CurrLevel = SaveLoadStuff.LoadLevel(Path.GetFileNameWithoutExtension(Files[SelectedLevel]));
+                CurrLevelName = Path.GetFileNameWithoutExtension(Files[SelectedLevel]);
+
+                LevelSelect = false;
+                LevelEditor = true;
+            }
+
+            if (KeyboardState.IsKeyUp(Keys.X) && PreviousKeyboardState.IsKeyDown(Keys.X))
+            {
+                if (File.Exists(Files[SelectedLevel]))
+                {
+                    File.Delete(Files[SelectedLevel]);
+                }
+            }
+        }
+
+        if (KeyboardState.IsKeyUp(Keys.U) && PreviousKeyboardState.IsKeyDown(Keys.U))
+        {
+            if (CurrLevelName != String.Empty)
+            {
+                LevelSerializer.SaveLevel(CurrLevel, CurrLevelName);
+            }
+            else
+            {
+                LevelSerializer.SaveLevel(CurrLevel, "Unnamed");
             }
         }
 
@@ -193,13 +251,13 @@ public class Game1 : Game
                 EntityUtils.TickEntities();
                 Cube.Velocity.X += 1f;
 
-                if (CamPos.Y > -Cube.Position.Y + 240)
+                if (CamPos.Y > -Cube.Position.Y + _graphics.PreferredBackBufferHeight + 40)
                 {
-                    CamPos.Y -= 1f * MathF.Abs(-Cube.Position.Y + 200 - CamPos.Y) / 10;
+                    CamPos.Y -= 1f * MathF.Abs(-Cube.Position.Y + _graphics.PreferredBackBufferHeight - CamPos.Y) / 10;
                 }
-                if (CamPos.Y < -Cube.Position.Y + 160)
+                if (CamPos.Y < -Cube.Position.Y + _graphics.PreferredBackBufferHeight - 40)
                 {
-                    CamPos.Y += 1f * MathF.Abs(-Cube.Position.Y + 200 - CamPos.Y) / 10;
+                    CamPos.Y += 1f * MathF.Abs(-Cube.Position.Y + _graphics.PreferredBackBufferHeight - CamPos.Y) / 10;
                 }
             }
 
@@ -217,19 +275,51 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
+        if (LevelSelect)
+        {
+            GraphicsDevice.Clear(Color.Gray);
+        }
+        else
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+        }
 
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-        EntityUtils.DrawEntities(_spriteBatch, CamPos);
 
-        if (LevelEditor)
+        if (!LevelSelect)
         {
-            _spriteBatch.Draw(Content.Load<Texture2D>("Gometry"), CurrLevel.StartPos + CamPos, null, Color.White, 0f, new Vector2(), 3f, SpriteEffects.None, 0f);
+            EntityUtils.DrawEntities(_spriteBatch, CamPos);
 
-            _spriteBatch.DrawString(font, "Level Editor", new Vector2(20, 20), Color.White);
+            if (LevelEditor)
+            {
+                _spriteBatch.Draw(Content.Load<Texture2D>("Gometry"), CurrLevel.StartPos + CamPos, null, Color.White, 0f, new Vector2(), GlobalScale, SpriteEffects.None, 0f);
 
-            _spriteBatch.Draw(Blocks[CurrBlock], new Vector2(20, 50), null, Color.White, 0f, new Vector2(0, 0), 3f, SpriteEffects.None, 0f);
-            _spriteBatch.DrawString(font, CurrBlock.ToString(), new Vector2(80, 60), Color.White);
+                _spriteBatch.DrawString(font, "Level Editor", new Vector2(20, 20), Color.White);
+
+                _spriteBatch.Draw(Blocks[CurrBlock], new Vector2(20, 50), null, Color.White, 0f, new Vector2(0, 0), 3f, SpriteEffects.None, 0f);
+                _spriteBatch.DrawString(font, CurrBlock.ToString(), new Vector2(80, 60), Color.White);
+            }
+        }
+        else
+        {
+            string dir = Path.Combine(Directory.GetCurrentDirectory(), "Levels");
+            var Files = Directory.GetFiles(dir);
+
+            _spriteBatch.DrawString(font, SelectedLevel.ToString(), new Vector2(50, 50), Color.White);
+
+            _spriteBatch.DrawString(font, "Enter - Load Level", new Vector2(150, GraphicsDevice.Viewport.Height - 100), Color.White);
+            _spriteBatch.DrawString(font, "N - New Level", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height - 100), Color.White);
+            _spriteBatch.DrawString(font, "X - Delete Level", new Vector2(GraphicsDevice.Viewport.Width - 300, GraphicsDevice.Viewport.Height - 100), Color.White);
+
+            for (int i = 0; i < Files.Length; i++)
+            {
+                _spriteBatch.DrawString(font, Path.GetFileNameWithoutExtension(Files[i]), new Vector2(GraphicsDevice.Viewport.Width / 2, 100 + i * 30), Color.White);
+
+                if (i == SelectedLevel)
+                {
+                    _spriteBatch.DrawRectangle(new RectangleF(GraphicsDevice.Viewport.Width / 2, 100 + i * 30, font.MeasureString(Path.GetFileNameWithoutExtension(Files[i])).X, font.MeasureString(Path.GetFileNameWithoutExtension(Files[i])).Y), Color.White, 2);
+                }
+            }
         }
 
         _spriteBatch.End();
@@ -240,15 +330,15 @@ public class Game1 : Game
 
     public void PlaceBlock(float x, float y)
     {
-        float gridSize = 48;
-        float adjustedX = (float)Math.Floor((x - CamPos.X) / gridSize) * gridSize + 24;
-        float adjustedY = (float)Math.Floor((y - CamPos.Y) / gridSize) * gridSize + 24;
+        float gridSize = 16 * GlobalScale;
+        float adjustedX = (float)Math.Floor((x - CamPos.X) / gridSize) * gridSize + 8 * GlobalScale;
+        float adjustedY = (float)Math.Floor((y - CamPos.Y) / gridSize) * gridSize + 8 * GlobalScale;
 
         Vector2 Position = new Vector2(adjustedX, adjustedY);
 
         if (!CurrLevel.BlockMap.ContainsKey(Position))
         {
-            Entity CreatedEntity = EntityUtils.CreateEntity(new Vector2(adjustedX, adjustedY), CurrBlock, null, 3f);
+            Entity CreatedEntity = EntityUtils.CreateEntity(new Vector2(adjustedX, adjustedY), CurrBlock, null, GlobalScale);
 
             if (CurrBlock == 2)
             {
@@ -265,9 +355,9 @@ public class Game1 : Game
 
     public void RemoveBlock(float x, float y)
     {
-        float gridSize = 48;
-        float adjustedX = (float)Math.Floor((x - CamPos.X) / gridSize) * gridSize + 24;
-        float adjustedY = (float)Math.Floor((y - CamPos.Y) / gridSize) * gridSize + 24;
+        float gridSize = 16 * GlobalScale;
+        float adjustedX = (float)Math.Floor((x - CamPos.X) / gridSize) * gridSize + 8 * GlobalScale;
+        float adjustedY = (float)Math.Floor((y - CamPos.Y) / gridSize) * gridSize + 8 * GlobalScale;
 
         Vector2 Position = new Vector2(adjustedX, adjustedY);
 
@@ -284,7 +374,7 @@ public class Game1 : Game
         LevelEditor = false;
         Cube.Hidden = false;
 
-        Cube.Position = CurrLevel.StartPos + new System.Numerics.Vector2(24, 24);
+        Cube.Position = CurrLevel.StartPos + new System.Numerics.Vector2(8f * GlobalScale, 8f * GlobalScale);
         GravityComponent g = Cube.GetComponent<GravityComponent>();
         if (g != null)
         {
@@ -296,7 +386,7 @@ public class Game1 : Game
 
     public Entity CreatePlayer()
     {
-        Cube = new Entity(new Vector2(), -1, Content.Load<Texture2D>("Gometry"), 3f);
+        Cube = new Entity(new Vector2(), -1, Content.Load<Texture2D>("Gometry"), GlobalScale);
 
         Cube.AddComponent(new GravityComponent(Cube, 0.2f));
         Cube.AddComponent(new ColliderComponent(Cube, ResetLevel, null, false, false));
