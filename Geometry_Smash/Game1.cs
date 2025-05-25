@@ -5,8 +5,11 @@ using EntitySystem;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.CompilerServices;
 using MonoGame.Extended;
+using System.Linq;
+using System.Text;
+using System.Runtime.Intrinsics.X86;
+using System.Runtime.CompilerServices;
 
 namespace Geometry_Smash;
 
@@ -88,6 +91,11 @@ public class Game1 : Game
     private MouseState PreviousMouseState;
     private KeyboardState PreviousKeyboardState;
     public static int StartDelay;
+
+    string Name = "";
+    private bool inputingText = false;
+
+    private bool SavedLevel = false;
 
     protected override void Update(GameTime gameTime)
     {
@@ -190,14 +198,14 @@ public class Game1 : Game
             string dir = Path.Combine(Directory.GetCurrentDirectory(), "Levels");
             int FileAmount = Directory.GetFiles(dir).Length;
 
-            if (KeyboardState.IsKeyUp(Keys.Down) && PreviousKeyboardState.IsKeyDown(Keys.Down))
+            if (KeyboardState.IsKeyUp(Keys.Down) && PreviousKeyboardState.IsKeyDown(Keys.Down) && !inputingText)
             {
                 if (SelectedLevel + 1 != FileAmount)
                 {
                     SelectedLevel++;
                 }
             }
-            if (KeyboardState.IsKeyUp(Keys.Up) && PreviousKeyboardState.IsKeyDown(Keys.Up))
+            if (KeyboardState.IsKeyUp(Keys.Up) && PreviousKeyboardState.IsKeyDown(Keys.Up) && !inputingText)
             {
                 if (SelectedLevel - 1 != -1)
                 {
@@ -207,7 +215,7 @@ public class Game1 : Game
 
             var Files = Directory.GetFiles(dir);
 
-            if (KeyboardState.IsKeyUp(Keys.Enter) && PreviousKeyboardState.IsKeyDown(Keys.Enter))
+            if (KeyboardState.IsKeyUp(Keys.Enter) && PreviousKeyboardState.IsKeyDown(Keys.Enter) && !inputingText)
             {
                 CurrLevel = SaveLoadStuff.LoadLevel(Path.GetFileNameWithoutExtension(Files[SelectedLevel]));
                 CurrLevelName = Path.GetFileNameWithoutExtension(Files[SelectedLevel]);
@@ -216,12 +224,17 @@ public class Game1 : Game
                 LevelEditor = true;
             }
 
-            if (KeyboardState.IsKeyUp(Keys.X) && PreviousKeyboardState.IsKeyDown(Keys.X))
+            if (KeyboardState.IsKeyUp(Keys.X) && PreviousKeyboardState.IsKeyDown(Keys.X) && !inputingText)
             {
                 if (File.Exists(Files[SelectedLevel]))
                 {
                     File.Delete(Files[SelectedLevel]);
                 }
+            }
+
+            if (KeyboardState.IsKeyUp(Keys.N) && PreviousKeyboardState.IsKeyDown(Keys.N) && !inputingText)
+            {
+                inputingText = true;
             }
         }
 
@@ -230,10 +243,12 @@ public class Game1 : Game
             if (CurrLevelName != String.Empty)
             {
                 LevelSerializer.SaveLevel(CurrLevel, CurrLevelName);
+                SavedLevel = true;
             }
             else
             {
                 LevelSerializer.SaveLevel(CurrLevel, "Unnamed");
+                SavedLevel = true;
             }
         }
 
@@ -268,10 +283,28 @@ public class Game1 : Game
             Cube.Hidden = true;
         }
 
+        if (inputingText)
+        {
+            Name += GetKeyboardInput(KeyboardState, PreviousKeyboardState);
+
+            if (KeyboardState.IsKeyUp(Keys.Enter) && PreviousKeyboardState.IsKeyDown(Keys.Enter))
+            {
+                inputingText = false;
+                CurrLevel = new Level(new System.Numerics.Vector2(0, 0), new Dictionary<Vector2, Entity>(), new List<Entity>(), new List<ColliderComponent>());
+                LevelSerializer.SaveLevel(CurrLevel, Name);
+                CurrLevelName = Name;
+
+                Name = String.Empty;
+                LevelSelect = false;
+            }
+        }
+
         PreviousMouseState = MouseState;
         PreviousKeyboardState = KeyboardState;
         base.Update(gameTime);
     }
+
+    private int SaveCounter = 0;
 
     protected override void Draw(GameTime gameTime)
     {
@@ -285,6 +318,18 @@ public class Game1 : Game
         }
 
         _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+
+        if (SavedLevel)
+        {
+            SaveCounter = 120;
+            SavedLevel = false;
+        }
+
+        if (SaveCounter > 0)
+        {
+            SaveCounter--;
+            _spriteBatch.DrawString(font, "Saved Level", new Vector2(20, 120), Color.White);
+        }
 
         if (!LevelSelect)
         {
@@ -310,6 +355,14 @@ public class Game1 : Game
             _spriteBatch.DrawString(font, "Enter - Load Level", new Vector2(150, GraphicsDevice.Viewport.Height - 100), Color.White);
             _spriteBatch.DrawString(font, "N - New Level", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height - 100), Color.White);
             _spriteBatch.DrawString(font, "X - Delete Level", new Vector2(GraphicsDevice.Viewport.Width - 300, GraphicsDevice.Viewport.Height - 100), Color.White);
+
+            if (inputingText)
+            {
+                _spriteBatch.DrawString(font, "Input new level's name", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2 - 30), Color.White);
+
+                _spriteBatch.DrawString(font, Name, new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.White);
+                _spriteBatch.DrawRectangle(new RectangleF(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2, font.MeasureString(Name).X, font.MeasureString(Name).Y), Color.White, 2);
+            }
 
             for (int i = 0; i < Files.Length; i++)
             {
@@ -342,7 +395,7 @@ public class Game1 : Game
 
             if (CurrBlock == 2)
             {
-                CreatedEntity.AddComponent(new ColliderComponent(CreatedEntity, ResetLevel, new System.Drawing.RectangleF(14f, 14f, 20, 30), true));
+                CreatedEntity.AddComponent(new ColliderComponent(CreatedEntity, ResetLevel, new System.Drawing.RectangleF(25f, 24f, 30, 45), true));
             }
             else
             {
@@ -393,5 +446,37 @@ public class Game1 : Game
         Cube.AddComponent(new CharacterControllerComponent(Cube, 25));
 
         return Cube;
+    }
+
+    public string GetKeyboardInput(KeyboardState CurrentKeyboardState, KeyboardState OldKeyboardState)
+    {
+        StringBuilder InputText = new StringBuilder();
+
+        foreach (var key in CurrentKeyboardState.GetPressedKeys())
+        {
+            if (!OldKeyboardState.IsKeyDown(key)) // Key just pressed
+            {
+                if (key == Keys.Back && InputText.Length > 0)
+                {
+                    InputText.Length--;
+                }
+                else if (key == Keys.Space)
+                {
+                    InputText.Append(' ');
+                }
+                else if (key >= Keys.A && key <= Keys.Z)
+                {
+                    bool shift = CurrentKeyboardState.IsKeyDown(Keys.LeftShift) || CurrentKeyboardState.IsKeyDown(Keys.RightShift);
+                    char c = (char)(key - Keys.A + (shift ? 'A' : 'a'));
+                    InputText.Append(c);
+                }
+                else if (key >= Keys.D0 && key <= Keys.D9)
+                {
+                    InputText.Append((char)(key - Keys.D0 + '0'));
+                }
+            }
+        }
+
+        return InputText.ToString();
     }
 }
