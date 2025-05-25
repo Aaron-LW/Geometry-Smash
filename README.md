@@ -7,6 +7,13 @@
  - Go to releases
  - Get the right version for you Operating System (Linux probably doesn't work)
  - unzip the .zip file
- - in the Geometry_Smash
- - find the Apphost.exe file and double click it
+ - in the Geometry_Smash folder find the Geometry_Smash.exe and double click it
  - It should hopefully start now
+
+**Controls**
+- Left click for placing blocks
+- Right click for removing blocks
+- Up and down arrow to switch selected block
+- F to play the level
+- Z to show hitboxes
+- C to go to the level select screen
