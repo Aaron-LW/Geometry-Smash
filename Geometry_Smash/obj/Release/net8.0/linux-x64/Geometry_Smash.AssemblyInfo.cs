@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Geometry_Smash")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eaa75755000dee9aa19f0c8ebbbcf532847e75e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dde2942009a73034a5e595fe0cfc109855c3d07")]
 [assembly: System.Reflection.AssemblyProductAttribute("Geometry_Smash")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Geometry_Smash")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

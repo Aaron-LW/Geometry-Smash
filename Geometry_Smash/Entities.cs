@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public class Entity 
 {
@@ -99,40 +100,55 @@ namespace EntitySystem
 {
     public class EntityUtils
     {
-        public static void DrawEntities(SpriteBatch _spriteBatch, Vector2 CamPos) 
+        public static void DrawEntities(SpriteBatch _spriteBatch, Vector2 CamPos)
         {
-            for (int i = 0; i < Game1.CurrLevel.Entities.Count; i++) 
+            for (int i = 0; i < Game1.CurrLevel.Entities.Count; i++)
             {
                 Game1.CurrLevel.Entities[i].Draw(_spriteBatch, CamPos);
             }
         }
-    
+
         public static Entity CreateEntity(Vector2 position, int textureIndex = -1, Texture2D texture = null, float scale = 1f, float rotation = 0f)
         {
             Game1.CurrLevel.Entities.Add(new Entity(position, textureIndex, texture, scale, rotation));
             return Game1.CurrLevel.Entities[Game1.CurrLevel.Entities.Count - 1];
         }
-        
-        public static void TickEntities() 
+
+        public static void TickEntities()
         {
-            for (int i = 0; i < Game1.CurrLevel.Entities.Count; i++) 
+            for (int i = 0; i < Game1.CurrLevel.Entities.Count; i++)
             {
                 Game1.CurrLevel.Entities[i].Tick();
             }
         }
-        
-        public static void RemoveEntity(Entity Entity) 
+
+        public static void RemoveEntity(Entity Entity)
         {
-            for (int i = 0; i < Entity.Components.Count; i++) 
+            for (int i = 0; i < Entity.Components.Count; i++)
             {
-                if (Entity.Components[i] is ColliderComponent ColliderComponent) 
+                if (Entity.Components[i] is ColliderComponent ColliderComponent)
                 {
                     Game1.CurrLevel.Collider.Remove(ColliderComponent);
                 }
             }
-        
+
             Entity.Components.Clear();
             Game1.CurrLevel.Entities.Remove(Entity);
+        }
+
+        public static int GetRightMostBlockPosition()
+        {
+            int RightMost = 0;
+
+            foreach (Vector2 Position in Game1.CurrLevel.BlockMap.Keys)
+            {
+                if (Position.X > RightMost)
+                {
+                    RightMost = (int)Position.X;
+                }
+            }
+
+            return RightMost;  
         }
     }
 }

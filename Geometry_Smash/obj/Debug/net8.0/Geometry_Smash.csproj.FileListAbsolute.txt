@@ -82,3 +82,5 @@
 /home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/obj/Debug/net8.0/Geometry_Smash.pdb
 /home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/obj/Debug/net8.0/Geometry_Smash.genruntimeconfig.cache
 /home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/obj/Debug/net8.0/ref/Geometry_Smash.dll
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/GS End.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/GS End Better.xnb

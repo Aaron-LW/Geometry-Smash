@@ -34,7 +34,6 @@ public class GravityComponent : Component
     public void Update() 
     {
         YVel += Acceleration;
-        Console.WriteLine(Acceleration);
         Parent.Velocity.Y += YVel;
     }
 }

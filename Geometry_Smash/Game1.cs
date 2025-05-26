@@ -45,6 +45,9 @@ public class Game1 : Game
 
     public static float GlobalScale = 5f;
 
+    public Vector2 EndPos;
+    public Entity End;
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -55,6 +58,10 @@ public class Game1 : Game
         //_graphics.SynchronizeWithVerticalRetrace = false;
 
         Window.AllowUserResizing = true;
+
+        var displayMode = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode;
+        _graphics.PreferredBackBufferWidth = displayMode.Width;
+        _graphics.PreferredBackBufferHeight = displayMode.Height;
 
         _graphics.IsFullScreen = true;
         _graphics.ApplyChanges();
@@ -70,6 +77,8 @@ public class Game1 : Game
         Cube.AddComponent(new GravityComponent(Cube, 0.2f));
         Cube.AddComponent(new ColliderComponent(Cube, ResetLevel, null, false, false));
         Cube.AddComponent(new CharacterControllerComponent(Cube, 25));
+
+        End = new Entity(EndPos, -1, Content.Load<Texture2D>("GS End Better"), GlobalScale);
 
         base.Initialize();
     }
@@ -96,6 +105,9 @@ public class Game1 : Game
     private bool inputingText = false;
 
     private bool SavedLevel = false;
+
+    private bool Win = false;
+    private bool StopCam = false;
 
     protected override void Update(GameTime gameTime)
     {
@@ -195,7 +207,20 @@ public class Game1 : Game
         }
         else if (LevelSelect)
         {
-            string dir = Path.Combine(Directory.GetCurrentDirectory(), "Levels");
+            string dir = "";
+
+            if (Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "Levels")))
+            {
+                dir = Path.Combine(Directory.GetCurrentDirectory(), "Levels");
+            }
+            else
+            {
+                Directory.CreateDirectory(Directory.GetCurrentDirectory() + "/Levels");
+                Console.WriteLine("machdirecotry");
+
+                dir = Path.Combine(Directory.GetCurrentDirectory(), "Levels");
+            }
+
             int FileAmount = Directory.GetFiles(dir).Length;
 
             if (KeyboardState.IsKeyUp(Keys.Down) && PreviousKeyboardState.IsKeyDown(Keys.Down) && !inputingText)
@@ -264,19 +289,22 @@ public class Game1 : Game
             else
             {
                 EntityUtils.TickEntities();
-                Cube.Velocity.X += 1f;
+                Cube.Velocity.X += 1.2f;
 
-                if (CamPos.Y > -Cube.Position.Y + _graphics.PreferredBackBufferHeight + 40)
+                if (!Win)
                 {
-                    CamPos.Y -= 1f * MathF.Abs(-Cube.Position.Y + _graphics.PreferredBackBufferHeight - CamPos.Y) / 10;
-                }
-                if (CamPos.Y < -Cube.Position.Y + _graphics.PreferredBackBufferHeight - 40)
-                {
-                    CamPos.Y += 1f * MathF.Abs(-Cube.Position.Y + _graphics.PreferredBackBufferHeight - CamPos.Y) / 10;
+                    if (CamPos.Y > -Cube.Position.Y + _graphics.PreferredBackBufferHeight / 2 + 40)
+                    {
+                        CamPos.Y -= 1f * MathF.Abs(-Cube.Position.Y + _graphics.PreferredBackBufferHeight / 2 - CamPos.Y) / 10;
+                    }
+                    if (CamPos.Y < -Cube.Position.Y + _graphics.PreferredBackBufferHeight / 2 - 40)
+                    {
+                        CamPos.Y += 1f * MathF.Abs(-Cube.Position.Y + _graphics.PreferredBackBufferHeight / 2 - CamPos.Y) / 10;
+                    }
                 }
             }
 
-            CamPos.X = -Cube.Position.X + 100;
+            if (!StopCam) { CamPos.X = -Cube.Position.X + 100; }
         }
         else
         {
@@ -296,6 +324,22 @@ public class Game1 : Game
 
                 Name = String.Empty;
                 LevelSelect = false;
+            }
+        }
+
+        End.Position.X = EntityUtils.GetRightMostBlockPosition() + End.Texture.Width / 2 * GlobalScale;
+        End.Position.Y = -CamPos.Y + End.Texture.Height / 2 * GlobalScale;
+
+        if (!LevelEditor && !LevelSelect)
+        {
+            if (Cube.Position.X > End.Position.X - End.Texture.Width / 1.2 * GlobalScale)
+            {
+                StopCam = true;
+            }
+
+            if (Cube.Position.X > End.Position.X - End.Texture.Width / 2 * GlobalScale)
+            {
+                Win = true;
             }
         }
 
@@ -334,6 +378,12 @@ public class Game1 : Game
         if (!LevelSelect)
         {
             EntityUtils.DrawEntities(_spriteBatch, CamPos);
+
+            if (!LevelEditor)
+            {
+                End.Draw(_spriteBatch, CamPos);
+                if (Win) { _spriteBatch.DrawString(font, "Win", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.LimeGreen, 0f, new Vector2(font.MeasureString("Win").X / 2, font.MeasureString("Win").Y / 2), 10f, SpriteEffects.None, 0); }
+            }
 
             if (LevelEditor)
             {
@@ -433,6 +483,9 @@ public class Game1 : Game
         {
             g.YVel = 0f;
         }
+
+        Win = false;
+        StopCam = false;
 
         Cube.Velocity = Vector2.Zero;
     }
