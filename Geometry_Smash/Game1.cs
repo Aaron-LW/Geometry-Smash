@@ -6,10 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using MonoGame.Extended;
-using System.Linq;
 using System.Text;
-using System.Runtime.Intrinsics.X86;
-using System.Runtime.CompilerServices;
 
 namespace Geometry_Smash;
 
@@ -114,7 +111,7 @@ public class Game1 : Game
         MouseState MouseState = Mouse.GetState();
         KeyboardState KeyboardState = Keyboard.GetState();
 
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape) && !inputingText)
             Exit();
 
         _elapsedTime += gameTime.ElapsedGameTime.TotalSeconds;
@@ -165,17 +162,17 @@ public class Game1 : Game
             }
         }
 
-        if (KeyboardState.IsKeyUp(Keys.Z) && PreviousKeyboardState.IsKeyDown(Keys.Z))
+        if (KeyboardState.IsKeyUp(Keys.Z) && PreviousKeyboardState.IsKeyDown(Keys.Z) && !inputingText)
         {
             Debug = !Debug;
         }
 
-        if (KeyboardState.IsKeyUp(Keys.C) && PreviousKeyboardState.IsKeyDown(Keys.C))
+        if (KeyboardState.IsKeyUp(Keys.C) && PreviousKeyboardState.IsKeyDown(Keys.C) && !inputingText)
         {
             LevelSelect = !LevelSelect;
         }
 
-        if (KeyboardState.IsKeyUp(Keys.F) && PreviousKeyboardState.IsKeyDown(Keys.F))
+        if (KeyboardState.IsKeyUp(Keys.F) && PreviousKeyboardState.IsKeyDown(Keys.F) && !inputingText)
         {
             if (LevelEditor == true)
             {
@@ -205,7 +202,7 @@ public class Game1 : Game
                 }
             }
         }
-        else if (LevelSelect)
+        else if (LevelSelect && !inputingText)
         {
             string dir = "";
 
@@ -257,13 +254,21 @@ public class Game1 : Game
                 }
             }
 
+            if (KeyboardState.IsKeyUp(Keys.D) && PreviousKeyboardState.IsKeyDown(Keys.D) && !inputingText)
+            {
+                if (File.Exists(Files[SelectedLevel]) && !File.Exists(Path.Combine(dir, Path.GetFileNameWithoutExtension(Files[SelectedLevel]) + " Copy.json")))
+                {
+                    File.Copy(Files[SelectedLevel], Path.Combine(dir, Path.GetFileNameWithoutExtension(Files[SelectedLevel]) + " Copy.json"));
+                }
+            }
+
             if (KeyboardState.IsKeyUp(Keys.N) && PreviousKeyboardState.IsKeyDown(Keys.N) && !inputingText)
             {
                 inputingText = true;
             }
         }
 
-        if (KeyboardState.IsKeyUp(Keys.U) && PreviousKeyboardState.IsKeyDown(Keys.U))
+        if (KeyboardState.IsKeyUp(Keys.U) && PreviousKeyboardState.IsKeyDown(Keys.U) && !inputingText)
         {
             if (CurrLevelName != String.Empty)
             {
@@ -313,7 +318,13 @@ public class Game1 : Game
 
         if (inputingText)
         {
-            Name += GetKeyboardInput(KeyboardState, PreviousKeyboardState);
+            if (PreviousKeyboardState.IsKeyDown(Keys.Escape) && KeyboardState.IsKeyUp(Keys.Escape))
+            {
+                inputingText = false;
+                Name = "";
+            }
+
+            Name = GetKeyboardInput(KeyboardState, PreviousKeyboardState, new StringBuilder(Name));
 
             if (KeyboardState.IsKeyUp(Keys.Enter) && PreviousKeyboardState.IsKeyDown(Keys.Enter))
             {
@@ -391,7 +402,7 @@ public class Game1 : Game
 
                 _spriteBatch.DrawString(font, "Level Editor", new Vector2(20, 20), Color.White);
 
-                _spriteBatch.Draw(Blocks[CurrBlock], new Vector2(20, 50), null, Color.White, 0f, new Vector2(0, 0), 3f, SpriteEffects.None, 0f);
+                _spriteBatch.Draw(Blocks[CurrBlock], new Vector2(20, 55), null, Color.White, 0f, new Vector2(0, 0), 3f, SpriteEffects.None, 0f);
                 _spriteBatch.DrawString(font, CurrBlock.ToString(), new Vector2(80, 60), Color.White);
             }
         }
@@ -400,27 +411,29 @@ public class Game1 : Game
             string dir = Path.Combine(Directory.GetCurrentDirectory(), "Levels");
             var Files = Directory.GetFiles(dir);
 
-            _spriteBatch.DrawString(font, SelectedLevel.ToString(), new Vector2(50, 50), Color.White);
-
             _spriteBatch.DrawString(font, "Enter - Load Level", new Vector2(150, GraphicsDevice.Viewport.Height - 100), Color.White);
-            _spriteBatch.DrawString(font, "N - New Level", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height - 100), Color.White);
-            _spriteBatch.DrawString(font, "X - Delete Level", new Vector2(GraphicsDevice.Viewport.Width - 300, GraphicsDevice.Viewport.Height - 100), Color.White);
+            _spriteBatch.DrawString(font, "D - Duplicate Level", new Vector2(GraphicsDevice.Viewport.Width / 2 - 200 - font.MeasureString("D - Duplicate Level").X / 2, GraphicsDevice.Viewport.Height - 100), Color.White);
+            _spriteBatch.DrawString(font, "N - New Level", new Vector2(GraphicsDevice.Viewport.Width / 2 + 200 - font.MeasureString("N - New Level").X / 2, GraphicsDevice.Viewport.Height - 100), Color.White);
+            _spriteBatch.DrawString(font, "X - Delete Level", new Vector2(GraphicsDevice.Viewport.Width - 300 - font.MeasureString("X - Delete Level").X / 2, GraphicsDevice.Viewport.Height - 100), Color.White);
 
             if (inputingText)
             {
-                _spriteBatch.DrawString(font, "Input new level's name", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2 - 30), Color.White);
+                _spriteBatch.DrawString(font, "Input new level's name", new Vector2(GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Input new level's name").X / 2, GraphicsDevice.Viewport.Height / 2 - 50), Color.White);
 
-                _spriteBatch.DrawString(font, Name, new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.White);
-                _spriteBatch.DrawRectangle(new RectangleF(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2, font.MeasureString(Name).X, font.MeasureString(Name).Y), Color.White, 2);
+                _spriteBatch.DrawString(font, Name, new Vector2(GraphicsDevice.Viewport.Width / 2 - font.MeasureString(Name.ToString()).X / 2, GraphicsDevice.Viewport.Height / 2), Color.White);
+                _spriteBatch.DrawRectangle(new RectangleF(GraphicsDevice.Viewport.Width / 2 - font.MeasureString(Name.ToString()).X / 2 - 5, GraphicsDevice.Viewport.Height / 2 - 5, font.MeasureString(Name).X + 10, font.MeasureString(Name).Y + 10), Color.White, 2);
+
+                _spriteBatch.DrawString(font, "Press escape to cancel", new Vector2(GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Input new level's name").X / 2, GraphicsDevice.Viewport.Height / 2 + 50), Color.White);
             }
 
             for (int i = 0; i < Files.Length; i++)
             {
-                _spriteBatch.DrawString(font, Path.GetFileNameWithoutExtension(Files[i]), new Vector2(GraphicsDevice.Viewport.Width / 2, 100 + i * 30), Color.White);
+                string Name = Path.GetFileNameWithoutExtension(Files[i]);
+                _spriteBatch.DrawString(font, Name, new Vector2(GraphicsDevice.Viewport.Width / 2 - font.MeasureString(Name).X / 2, 100 + i * 30), Color.White);
 
-                if (i == SelectedLevel)
+                if (i == SelectedLevel && !inputingText)
                 {
-                    _spriteBatch.DrawRectangle(new RectangleF(GraphicsDevice.Viewport.Width / 2, 100 + i * 30, font.MeasureString(Path.GetFileNameWithoutExtension(Files[i])).X, font.MeasureString(Path.GetFileNameWithoutExtension(Files[i])).Y), Color.White, 2);
+                    _spriteBatch.DrawRectangle(new RectangleF(GraphicsDevice.Viewport.Width / 2 - font.MeasureString(Name).X / 2, 100 + i * 30, font.MeasureString(Path.GetFileNameWithoutExtension(Files[i])).X, font.MeasureString(Path.GetFileNameWithoutExtension(Files[i])).Y), Color.White, 2);
                 }
             }
         }
@@ -501,13 +514,13 @@ public class Game1 : Game
         return Cube;
     }
 
-    public string GetKeyboardInput(KeyboardState CurrentKeyboardState, KeyboardState OldKeyboardState)
+    public string GetKeyboardInput(KeyboardState CurrentKeyboardState, KeyboardState OldKeyboardState, StringBuilder Current)
     {
-        StringBuilder InputText = new StringBuilder();
+        StringBuilder InputText = Current;
 
         foreach (var key in CurrentKeyboardState.GetPressedKeys())
         {
-            if (!OldKeyboardState.IsKeyDown(key)) // Key just pressed
+            if (!OldKeyboardState.IsKeyDown(key))
             {
                 if (key == Keys.Back && InputText.Length > 0)
                 {

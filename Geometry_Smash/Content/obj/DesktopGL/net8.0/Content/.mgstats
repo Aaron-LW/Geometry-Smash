@@ -1,6 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/DefaultBlock.png","/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/bin/DesktopGL/Content/DefaultBlock.xnb","TextureProcessor","Texture2DContent",153,1109,0.0912068
-"/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/font.spritefont","/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/bin/DesktopGL/Content/font.xnb","FontDescriptionProcessor","SpriteFontContent",2019,37913,0.0942524
+"/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/font.spritefont","/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/bin/DesktopGL/Content/font.xnb","FontDescriptionProcessor","SpriteFontContent",2012,37913,0.1555825
 "/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/Gometry.png","/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/bin/DesktopGL/Content/Gometry.xnb","TextureProcessor","Texture2DContent",399,1109,0.001824
 "/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/GometryBlock.png","/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/bin/DesktopGL/Content/GometryBlock.xnb","TextureProcessor","Texture2DContent",256,1109,0.0009987
 "/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/GradientBlock.png","/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/bin/DesktopGL/Content/GradientBlock.xnb","TextureProcessor","Texture2DContent",176,1109,0.0004154
