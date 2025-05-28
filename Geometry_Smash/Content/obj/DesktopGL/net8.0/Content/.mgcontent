@@ -4,6 +4,13 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/BigGroundSpikes.png</File>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/ConnectedBlock3.png</File>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/ConnectedBlock5.png</File>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/ConnectedBlock6.png</File>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/ConnectedBlock7.png</File>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/ConnectedBlock8.png</File>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/ConnectedBlock9.png</File>
     <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/DefaultBlock.png</File>
     <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/font.spritefont</File>
     <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/Gometry.png</File>
@@ -12,10 +19,21 @@
     <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/GS End Better.png</File>
     <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/GS End.png</File>
     <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/RandomBlock.png</File>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/SelectThing.png</File>
+    <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/SmallGroundSpikes.png</File>
     <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/SmolSpike.png</File>
     <File>/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/Content/Spike.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

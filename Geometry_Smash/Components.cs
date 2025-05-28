@@ -145,10 +145,11 @@ public class CharacterControllerComponent : Component
         if (ColliderComponent != null)
         {
             KeyboardState KeyboardState = Keyboard.GetState();
+            MouseState MouseState = Mouse.GetState();
         
-            if (ColliderComponent.OnGround == true) 
+            if (ColliderComponent.OnGround == true)
             {
-                if (KeyboardState.IsKeyDown(Keys.Space))
+                if (KeyboardState.IsKeyDown(Keys.Space) || KeyboardState.IsKeyDown(Keys.Up) || KeyboardState.IsKeyDown(Keys.W) || MouseState.LeftButton == ButtonState.Pressed)
                 {
                     Parent.Velocity.Y -= JumpStrength;
                 }

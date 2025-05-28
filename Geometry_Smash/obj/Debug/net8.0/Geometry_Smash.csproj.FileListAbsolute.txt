@@ -84,3 +84,12 @@
 /home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/obj/Debug/net8.0/ref/Geometry_Smash.dll
 /home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/GS End.xnb
 /home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/GS End Better.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/BigGroundSpikes.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/ConnectedBlock3.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/ConnectedBlock5.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/ConnectedBlock6.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/ConnectedBlock7.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/ConnectedBlock8.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/ConnectedBlock9.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/SmallGroundSpikes.xnb
+/home/aaron/MonoGame/Geometry_Smash/Geometry_Smash/bin/Debug/net8.0/Content/SelectThing.xnb

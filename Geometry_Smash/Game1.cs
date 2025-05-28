@@ -45,6 +45,8 @@ public class Game1 : Game
     public Vector2 EndPos;
     public Entity End;
 
+    private Entity SelectingThing;
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -77,6 +79,8 @@ public class Game1 : Game
 
         End = new Entity(EndPos, -1, Content.Load<Texture2D>("GS End Better"), GlobalScale);
 
+        SelectingThing = new Entity(new Vector2(), -1, Content.Load<Texture2D>("SelectThing"), GlobalScale);
+
         base.Initialize();
     }
 
@@ -88,7 +92,14 @@ public class Game1 : Game
         Blocks.Add(Content.Load<Texture2D>("GradientBlock"));
         Blocks.Add(Content.Load<Texture2D>("Spike"));
         Blocks.Add(Content.Load<Texture2D>("RandomBlock"));
-        Blocks.Add(Content.Load<Texture2D>("SmolSpike"));
+        Blocks.Add(Content.Load<Texture2D>("ConnectedBlock3"));
+        Blocks.Add(Content.Load<Texture2D>("ConnectedBlock5"));
+        Blocks.Add(Content.Load<Texture2D>("ConnectedBlock6"));
+        Blocks.Add(Content.Load<Texture2D>("ConnectedBlock7"));
+        Blocks.Add(Content.Load<Texture2D>("ConnectedBlock8"));
+        Blocks.Add(Content.Load<Texture2D>("ConnectedBlock9"));
+        Blocks.Add(Content.Load<Texture2D>("BigGroundSpikes"));
+        Blocks.Add(Content.Load<Texture2D>("SmallGroundSpikes"));
 
         font = Content.Load<SpriteFont>("font");
     }
@@ -145,14 +156,30 @@ public class Game1 : Game
                 CamPos.X -= 30f;
             }
 
-            if (MouseState.LeftButton == ButtonState.Released && PreviousMouseState.LeftButton == ButtonState.Pressed)
+            if (PreviousMouseState.LeftButton == ButtonState.Pressed)
             {
-                PlaceBlock(MouseState.Position.X, MouseState.Position.Y);
+                if (KeyboardState.IsKeyDown(Keys.LeftShift))
+                {
+                    PlaceBlock(MouseState.Position.X, MouseState.Position.Y);
+                }
+
+                if (MouseState.LeftButton == ButtonState.Released)
+                {
+                    PlaceBlock(MouseState.Position.X, MouseState.Position.Y);
+                }
             }
 
-            if (MouseState.RightButton == ButtonState.Released && PreviousMouseState.RightButton == ButtonState.Pressed)
+            if (PreviousMouseState.RightButton == ButtonState.Pressed)
             {
-                RemoveBlock(MouseState.Position.X, MouseState.Position.Y);
+                if (KeyboardState.IsKeyDown(Keys.LeftShift))
+                {
+                    RemoveBlock(MouseState.Position.X, MouseState.Position.Y);
+                }
+
+                if (MouseState.RightButton == ButtonState.Released)
+                {
+                    RemoveBlock(MouseState.Position.X, MouseState.Position.Y);
+                }
             }
 
             if (MouseState.MiddleButton == ButtonState.Released && PreviousMouseState.MiddleButton == ButtonState.Pressed)
@@ -354,6 +381,13 @@ public class Game1 : Game
             }
         }
 
+        if (Win && KeyboardState.IsKeyUp(Keys.Space) && PreviousKeyboardState.IsKeyDown(Keys.Space))
+        {
+            ResetLevel();
+        }
+
+        SelectingThing.Position = GetGridPos(MouseState.Position.X, MouseState.Position.Y);
+
         PreviousMouseState = MouseState;
         PreviousKeyboardState = KeyboardState;
         base.Update(gameTime);
@@ -393,7 +427,11 @@ public class Game1 : Game
             if (!LevelEditor)
             {
                 End.Draw(_spriteBatch, CamPos);
-                if (Win) { _spriteBatch.DrawString(font, "Win", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.LimeGreen, 0f, new Vector2(font.MeasureString("Win").X / 2, font.MeasureString("Win").Y / 2), 10f, SpriteEffects.None, 0); }
+                if (Win)
+                {
+                    _spriteBatch.DrawString(font, "Win", new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2), Color.LimeGreen, 0f, new Vector2(font.MeasureString("Win").X / 2, font.MeasureString("Win").Y / 2), 10f, SpriteEffects.None, 0);
+                    _spriteBatch.DrawString(font, "Press space to restart", new Vector2(GraphicsDevice.Viewport.Width / 2 - font.MeasureString("Press space to restart").X / 2 * 2, GraphicsDevice.Viewport.Height / 2 + 120), Color.LimeGreen, 0f, new Vector2(), 2f, SpriteEffects.None, 0);
+                }
             }
 
             if (LevelEditor)
@@ -404,6 +442,8 @@ public class Game1 : Game
 
                 _spriteBatch.Draw(Blocks[CurrBlock], new Vector2(20, 55), null, Color.White, 0f, new Vector2(0, 0), 3f, SpriteEffects.None, 0f);
                 _spriteBatch.DrawString(font, CurrBlock.ToString(), new Vector2(80, 60), Color.White);
+
+                SelectingThing.Draw(_spriteBatch, CamPos);
             }
         }
         else
@@ -544,5 +584,14 @@ public class Game1 : Game
         }
 
         return InputText.ToString();
+    }
+
+    public Vector2 GetGridPos(float x, float y)
+    {
+        float gridSize = 16 * GlobalScale;
+        float adjustedX = (float)Math.Floor((x - CamPos.X) / gridSize) * gridSize + 8 * GlobalScale;
+        float adjustedY = (float)Math.Floor((y - CamPos.Y) / gridSize) * gridSize + 8 * GlobalScale;
+
+        return new Vector2(adjustedX, adjustedY);
     }
 }
