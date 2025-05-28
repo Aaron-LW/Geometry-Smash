@@ -13,7 +13,9 @@
 **Controls**
 - Left click for placing blocks
 - Right click for removing blocks
+- Hold shift and left / right click to fast place / remove blocks
 - Up and down arrow to switch selected block
 - F to play the level
 - Z to show hitboxes
 - C to go to the level select screen
+- U to save the current level
